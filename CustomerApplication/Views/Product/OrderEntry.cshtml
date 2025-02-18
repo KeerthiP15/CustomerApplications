@@ -1,0 +1,49 @@
+﻿<style>
+    h1{
+        padding-left:442px;
+    }
+</style>
+@model CustomerApplication.Models.ProductModel
+<h1>Customer Application</h1>
+<form asp-action="CalculateDiscount" method="post">
+    <label>Order Amount:</label>
+    <div class="form-group col-md-4">
+        <input class="form-control" type="number" asp-for="OrderAmount"/>
+        <span asp-validation-for="OrderAmount" class="text-danger"></span>
+    </div>
+    
+    <br /><br />
+    <label>Customer Type:</label>
+    <div class="form-group col-md-4">
+        <select id="Customer_Type" class="form-control Customer_Type">
+            <option value="0" >Select</option>
+            <option value="1" disabled>New</option>
+            <option value="2" disabled>Loyal</option>
+        </select>
+    </div>
+    <br /><br />
+    <button type="submit" class="btn btn-primary">Calculate</button>
+
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        
+        $("#OrderAmount").on("input", function () {
+            var number = $(this).val();
+           if (number < 100) {
+                $('.Customer_Type option[value=1]').attr('selected', 'selected');
+                $("#Customer_Type").prop("disabled", true);
+                
+                
+            } else {
+                $('.Customer_Type option[value=2]').attr('selected', 'selected');
+                $("#Customer_Type").prop("disabled", true);
+            }
+           
+        });
+    });
+</script>

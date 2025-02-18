@@ -1,0 +1,19 @@
+﻿@model ProductModel;
+@{
+    ViewData["Title"] = "ProductView";
+}
+<h2>Order Result</h2>
+@if(Model.OrderAmount >= 100)
+{
+    <p><strong>Order Amount:</strong> @Model.OrderAmount</p>
+    <p><strong>Discount Percentage:</strong> 10%</p>
+    <p><strong>Discount Amount:</strong> @Model.DiscountAmount</p>
+    <p><strong>Total:</strong> @Model.Total</p>
+}
+else
+{
+    <p><strong>Order Amount:</strong> @Model.OrderAmount</p>
+    <p style="color: red"> No discount available</p>
+}
+
+<a asp-action="OrderEntry" class="btn btn-secondary">Back to Order Entry</a>
