@@ -8,7 +8,7 @@
 <form asp-action="CalculateDiscount" method="post">
     <label>Order Amount:</label>
     <div class="form-group col-md-4">
-        <input class="form-control" type="number" asp-for="OrderAmount"/>
+        <input class="form-control" type="number" asp-for="OrderAmount" min="1"/>
         <span asp-validation-for="OrderAmount" class="text-danger"></span>
     </div>
     

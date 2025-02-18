@@ -22,6 +22,7 @@ namespace CustomerApplication.Controllers
                 model.DiscountPercent = 10;
                 model.DiscountAmount = (model.OrderAmount * model.DiscountPercent / 100);
                 model.Total = model.OrderAmount - model.DiscountAmount;
+        
             }
             return View("ProductView", model);
 
