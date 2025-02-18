@@ -1,6 +1,6 @@
 # CustomerApplication
 
-# Discount Calculation API
+# Discount Calculation
 
 ## 📝 Overview
 This is an ASP.NET Core MVC that calculates discounts based on input amounts and discount percentages. Based on the input amount customer type will change if input amount greater than 100 mean customer type will "Loyal" and also 10% discount was applicable other wise "No discounts were available".The project includes unit tests and CI/CD integration using GitHub Actions.
