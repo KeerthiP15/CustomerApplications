@@ -3,13 +3,13 @@
 # Discount Calculation API
 
 ## 📝 Overview
-This is an ASP.NET Core MVC API that calculates discounts based on input amounts and discount percentages. The project includes unit tests and CI/CD integration using GitHub Actions.
+This is an ASP.NET Core MVC that calculates discounts based on input amounts and discount percentages. Based on the input amount customer type will change if input amount greater than 100 mean customer type will "Loyal" and also 10% discount was applicable other wise "No discounts were available".The project includes unit tests and CI/CD integration using GitHub Actions.
 
 ---
 
 ## 🚀 Features
 - Calculates discounts based on percentage.
-- Validation for invalid inputs (negative values, zero amounts).
+- Validation for invalid inputs (negative values, zero amounts and range).
 - Unit tests using **xUnit**.
 - CI/CD pipeline setup using **GitHub Actions**.
 
@@ -20,7 +20,6 @@ This is an ASP.NET Core MVC API that calculates discounts based on input amounts
 - C#
 - xUnit (for unit testing)
 - GitHub Actions (for CI/CD)
-- Entity Framework Core (if using a database)
 
 ---
 
@@ -33,5 +32,5 @@ Ensure you have the following installed:
 
 ### **2️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone https://github.com/KeerthiP15/CustomerApplications.git
+cd CustomerApplications
