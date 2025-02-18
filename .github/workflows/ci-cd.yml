@@ -1,4 +1,4 @@
-name: ASP.NET Core CI/CD
+name: CustomerApplication
 
 on:
   push:
